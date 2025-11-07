@@ -5,7 +5,7 @@ from controllers.order_controller import get_all_order, add_orders, update_order
 web = Blueprint("web", __name__)
 
 # Endpoint API
-web.route("/api/menus", methods=["GET"])(get_all_menus)
+web.route("/", methods=["GET"])(get_all_menus)
 web.route("/api/menus", methods=["POST"])(add_menus)
 web.route("/api/menus/<int:id_menu>", methods=["PUT"])(update_menus)
 web.route("/api/menus/<int:id_menu>", methods=["DELETE"])(delete_menus)
